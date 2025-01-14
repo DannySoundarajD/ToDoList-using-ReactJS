@@ -1,0 +1,67 @@
+#sticky-footer {
+    width: 100%; /* Ensure it spans the full width of the viewport */
+    height: 60px;
+    background-color: #1f1f1f; 
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.5); 
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 30px;
+    position: fixed; /* Keeps it fixed at the bottom of the page */
+    bottom: -70px;  /* Initially hidden (will slide up when the active class is added) */
+    transition: bottom 0.4s ease;
+    z-index: 100; 
+    left: 0; /* Ensure it starts from the left side */
+    right: 0; /* Ensure it spans all the way to the right */
+  }
+  
+  #sticky-footer.active {
+    bottom: 0;  /* Makes the footer visible when the active class is added */
+  }
+  
+  .icon-container {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .icon {
+    width: 40px;
+    height: 40px;
+    background-color: #64ffda;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%; 
+    transition: transform 0.3s ease, background-color 0.3s ease; 
+    cursor: pointer;
+  }
+  
+  .icon:hover {
+    transform: scale(1.2); 
+    background-color: #ffb74d; 
+  }
+  
+  .contact-text {
+    position: relative;
+    top: 6px;
+    left: -12px;
+    font-size: 22px;
+    color: #fafafa; 
+    font-weight: 500;
+    margin-left: 15px; 
+  }
+  
+  .icon i {
+    font-size: 18px;
+    color: #121212;
+  }
+  
+  #footer-trigger {
+    height: 1px; /* Invisible trigger element */
+    background: transparent;
+    position: absolute; /* Make sure it's placed at the bottom of the page */
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+  

@@ -39,6 +39,7 @@ export const TodoWrapper = () => {
     return (
     <div className='TodoWrapper'>
         <h1>Get Things Done !</h1>
+        <div id="footer-trigger"></div>
         <TodoForm addTodo = {addTodo} />
          {todos.map((todo, index) => (
             todo.isEditing ? (
